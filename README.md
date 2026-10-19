@@ -2,7 +2,7 @@
 
 By M. A. Imtiaz, S. L. Phung, Y. Di, H. T. Le, H. Siddique, L. Bui, and A. Bouzerdoum.
 
-<img src="https://github.com/mai-visionai/NaviFusion-Net/blob/main/assets/your_image.png?raw=true" width="100%"/>
+<img src="./assests/navifusion_overview.png" width="100%"/>
 
 The paper is under review, and the code will be released after publication.
 
