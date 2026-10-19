@@ -11,5 +11,5 @@ The paper is under review, and the code will be released after publication.
 - Depth-guided early fusion with MFM (DRAFStem / DGAFRStem)
 - Lightweight multi-scale refinement (MSR) at P3/P4
 - Context aggregation (CAM) at P5
-- Two operating points: **NaviFusion-N** (efficiency) and **NaviFusion-S** (accuracy)
+- Two variants: NaviFusion-N (Nano) and NaviFusion-S (Small)
 - TrueSight RGB-D evaluation and Jetson Orin Nano TensorRT deployment
