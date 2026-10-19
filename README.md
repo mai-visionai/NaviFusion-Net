@@ -1,26 +1,49 @@
-# NaviFusion-Net
+# NaviFusion-Net: Efficient RGB-D Sensor Fusion for Scene Segmentation in Assistive Navigation
 
-Official implementation of **NaviFusion-Net** for RGB-D semantic scene segmentation in assistive navigation.
+By M. A. Imtiaz, S. L. Phung, Y. Di, H. T. Le, H. Siddique, L. Bui, and A. Bouzerdoum.
 
-**Status:** Source code and pretrained weights will be released upon publication of the paper.
+<img src="https://github.com/mai-visionai/NaviFusion-Net/blob/main/assets/navifusion_overview.png?raw=true" width="100%"/>
 
-## Paper
+The paper is under review, and the code will be released after publication.
 
-**NaviFusion-Net: Efficient RGB-D Sensor Fusion for Scene Segmentation in Assistive Navigation**  
+## Highlights
 
-## Planned release
+- Depth-guided early fusion with MFM (DRAFStem / DGAFRStem)
+- Lightweight multi-scale refinement (MSR) at P3/P4
+- Context aggregation (CAM) at P5
+- Two operating points: **NaviFusion-N** (efficiency) and **NaviFusion-S** (accuracy)
+- TrueSight RGB-D evaluation and Jetson Orin Nano TensorRT deployment
 
-After publication, this repository will include:
+## Results on TrueSight (RGB-D)
 
-- Training and evaluation code for NaviFusion-N and NaviFusion-S
-- Configuration files for the TrueSight RGB-D protocol
-- Scripts for semantic-map reconstruction and metric reporting
-- Jetson / TensorRT deployment guidance
+| Model | mIoU (%) | FPS (RTX 4090) | Params (M) |
+|:------|--------:|---------------:|-----------:|
+| YOLOv10-N (RGB-D) | 52.98 | 127.76 | 2.52 |
+| **NaviFusion-N** | **54.98** | 107.33 | 3.59 |
+| YOLOv10-S (RGB-D) | 55.88 | 118.11 | 7.88 |
+| **NaviFusion-S** | **57.20** | 75.75 | 10.39 |
+
+## Qualitative Examples
+
+<img src="https://github.com/mai-visionai/NaviFusion-Net/blob/main/assets/qualitative.png?raw=true" width="100%"/>
+
+## Embedded Deployment
+
+<img src="https://github.com/mai-visionai/NaviFusion-Net/blob/main/assets/jetson_kit.png?raw=true" width="70%"/>
+
+NaviFusion-N / NaviFusion-S support TensorRT FP16 inference on Jetson Orin Nano with live ZED Mini RGB-D input.
+
+## Code
+
+Training, evaluation, and deployment code will be released here after the paper is published.
 
 ## Citation
 
-A BibTeX entry will be added here after the paper is published.
-
-## Contact
-
-Muhammad Atif Imtiaz — [mai-visionai](https://github.com/mai-visionai)# NaviFusion-Net
+```bibtex
+@article{imtiaz2026navifusion,
+  title={NaviFusion-Net: Efficient RGB-D Sensor Fusion for Scene Segmentation in Assistive Navigation},
+  author={Imtiaz, Muhammad Atif and Phung, Son Lam and Di, Yang and Le, Hoang Thanh and Siddique, Hira and Bui, Ly and Bouzerdoum, Abdesselam},
+  journal={IEEE Sensors Journal},
+  year={2026},
+  note={Under review}
+}
